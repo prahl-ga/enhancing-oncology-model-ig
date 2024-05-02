@@ -2,10 +2,12 @@
 Instance: cancer-patient-jane-anyperson
 InstanceOf: EomCancerPatient
 Description: "Example of Patient"
-* identifier.use = #usual
-* identifier.type = IDTYPE#MC "Patient's Medicare number"
-* identifier.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier.value = "1EG4-TE5-MK73"
+* identifier[MBI].system = "http://hl7.org/fhir/sid/us-mbi"
+* identifier[MBI].value = "1CA0CA0CC00"
+* identifier[1].type = IDTYPE#MR "Medical Record Number"
+* identifier[1].system = "http://hospital.example.org"
+* identifier[1].value = "MR1234"
+
 * name.family = "Anyperson"
 * name.given[0] = "Jane"
 * name.given[1] = "B."

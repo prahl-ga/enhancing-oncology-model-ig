@@ -3,15 +3,17 @@ Profile: EomCancerPatient
 Parent: McodeCancerPatient
 Id: eom-cancer-patient
 Title: "EOM Cancer Patient Profile"
-Description: "An mCODE patient for use for federal health initiatives. A profile was created to ensure that there is at least a Medicare identifier included."
-* identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type"
+Description: "An EOM cander patient. A profile was created to ensure that there is at least a Medicare Beneficiary Identifier included."
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
-* identifier ^slicing.description = "Slicing by identifier.type"
-* identifier contains Medicare 0..1 MS
-* identifier[Medicare].type = IDTYPE#MC
+* identifier contains MBI 1..1
+* identifier[MBI] MS
+* identifier[MBI].system = "http://hl7.org/fhir/sid/us-mbi"
 
 * . MS
+
+
 
 /* ******** PRIMARY CANCER CONDITION ********* */
 
