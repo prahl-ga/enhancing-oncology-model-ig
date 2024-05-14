@@ -4,8 +4,9 @@ InstanceOf: EomCancerPatient
 Description: "Example of Patient"
 * identifier[MBI].system = "http://hl7.org/fhir/sid/us-mbi"
 * identifier[MBI].value = "1CA0CA0CC00"
+* identifier[1].system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[1].type = IDTYPE#MR "Medical Record Number"
-* identifier[1].system = "http://hospital.example.org"
+* identifier[1].system = "http://hospital.globalalliantinc.com"
 * identifier[1].value = "MR1234"
 
 * name.family = "Anyperson"
@@ -26,7 +27,7 @@ Description: "Example of Primary Cancer Condition"
 * clinicalStatus = ClinStatus#active "Active"
 * verificationStatus = VerStatus#confirmed "Confirmed"
 * category = CondCat#problem-list-item
-* code = SCT#353431000119107 "Primary malignant neoplasm of female left breast (disorder)"
+* code = SCT#93796005 "Primary malignant neoplasm of female breast (disorder)"
 * extension[histologyMorphologyBehavior].valueCodeableConcept = SCT#1187332001 "Adenocarcinoma (morphologic abnormality)"
 * subject = Reference(cancer-patient-jane-anyperson)
 * extension[assertedDate].valueDateTime = "2019-04-01"
