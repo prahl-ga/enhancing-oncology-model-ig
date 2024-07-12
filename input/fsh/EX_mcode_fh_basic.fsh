@@ -35,21 +35,6 @@ Description: "Example of Primary Cancer Condition"
 * stage.summary = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
 * stage.assessment = Reference(tnm-clinical-stage-group-3c)
 
-Instance: tnm-clinical-stage-group-3c
-InstanceOf: McodeStageGroup
-Description: "Example of TNM Clinical Stage Group"
-* code = SCT#399537006 "Clinical TNM stage grouping"
-* valueCodeableConcept = SCT#1222806003 "American Joint Committee on Cancer stage IIIC (qualifier value)"
-* status = #final "final"
-* method = SCT#897275008 "American Joint Commission on Cancer, Cancer Staging Manual, 8th edition neoplasm staging system (tumor staging)"
-* subject = Reference(cancer-patient-jane-anyperson)
-* focus = Reference(primary-cancer-condition-breast)  // added requirement STU3
-* effectiveDateTime = "2019-04-01"
-* performer = Reference(us-core-practitioner-kyle-anydoc)
-* hasMember[0] = Reference(tnm-clinical-primary-tumor-category-cT3)
-* hasMember[1] = Reference(tnm-clinical-regional-nodes-category-cN3)
-* hasMember[2] = Reference(tnm-clinical-distant-metastases-category-cM0)
-
 Instance: tnm-clinical-distant-metastases-category-cM0
 InstanceOf: EomMCategory
 Description: "Example of TNM Clinical Distant Metastases Category"
